@@ -1,0 +1,48 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('img/background2.png') no-repeat left top fixed;
+  background-size: contain;
+  background-color: #878988;
+  padding: 40px;
+  color: #333;
+}
+
+h2 {
+  color: #c00;
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+button {
+  background: #c00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+table {
+  background: #fff;
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+th {
+  background-color: #c00;
+  color: white;
+}
+
+button {
+  background: #c00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+}

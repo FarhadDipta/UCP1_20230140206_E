@@ -1,0 +1,165 @@
+<!-- features.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Features</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('img/background2.png') no-repeat left top fixed;
+      background-size: contain;
+      background-color: #878988;
+      padding: 30px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .gallery, .tech-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .gallery-item, .tech-item {
+      width: 150px;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      transition: transform 0.3s;
+      padding: 10px;
+    }
+    .gallery-item:hover, .tech-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img, .tech-item img {
+      width: 100%;
+    }
+    .gallery-item p, .tech-item small {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #555;
+    }
+    .description {
+      display: none;
+      background: #fff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .video-section {
+      margin: 40px auto;
+      max-width: 600px;
+    }
+    .video-section iframe {
+      width: 100%;
+      border-radius: 10px;
+    }
+    button {
+      background-color: #c00;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 30px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .gallery-item img, .tech-item img {
+      width: 100%;
+      height: 100px;
+      object-fit: contain;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Fitur Unggulan</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="img/kelasinteraktif.webp" alt="Kelas Interaktif">
+      <p>Kelas Interaktif</p>
+    </div>
+    <div class="gallery-item">
+      <img src="img/instruktur.webp" alt="Instruktur Profesional">
+      <p>Instruktur Profesional</p>
+    </div>
+    <div class="gallery-item">
+      <img src="img/sertif.png" alt="Sertifikat Online">
+      <p>Sertifikat Online</p>
+    </div>
+  </div>
+
+  <div class="video-section">
+    <h3>Video Materi Pembelajaran</h3>
+    <iframe height="315" src="https://www.youtube.com/embed/O6P86uwfdR0" title="Video Pembelajaran" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <h3>Bahasa & Teknologi Pemrograman</h3>
+  <div class="tech-gallery">
+    <div class="tech-item" onclick="showDetail('cpp')">
+      <img src="img/c++.jpg" alt="C++">
+      <small>Click untuk penjelasan C++</small>
+    </div>
+    <div class="tech-item" onclick="showDetail('sqlserver')">
+      <img src="img/sql server.png" alt="SQL Server">
+      <small>Click untuk penjelasan SQL Server</small>
+    </div>
+    <div class="tech-item" onclick="showDetail('python')">
+      <img src="img/py.png" alt="Python">
+      <small>Click untuk penjelasan Python</small>
+    </div>
+    <div class="tech-item" onclick="showDetail('html')">
+      <img src="img/html.png" alt="HTML">
+      <small>Click untuk penjelasan HTML</small>
+    </div>
+    <div class="tech-item" onclick="showDetail('css')">
+      <img src="img/css.png" alt="CSS">
+      <small>Click untuk penjelasan CSS</small>
+    </div>
+    <div class="tech-item" onclick="showDetail('javascript')">
+      <img src="img/js.png" alt="JavaScript">
+      <small>Click untuk penjelasan JavaScript</small>
+    </div>
+    <div class="tech-item" onclick="showDetail('kotlin')">
+      <img src="img/kotlin.png" alt="Kotlin">
+      <small>Click untuk penjelasan Kotlin</small>
+    </div>
+    <div class="tech-item" onclick="showDetail('java')">
+      <img src="img/java.jpg" alt="Java">
+      <small>Click untuk penjelasan Java</small>
+    </div>
+  </div>
+
+  <div class="description" id="descriptionBox"></div>
+
+  <button onclick="location.href='index.html'">Kembali ke Beranda</button>
+
+  <script>
+    const descriptions = {
+      cpp: "C++ adalah bahasa pemrograman tingkat tinggi yang digunakan untuk pengembangan sistem, game, dan perangkat lunak performa tinggi.",
+      sqlserver: "SQL Server adalah sistem manajemen basis data relasional dari Microsoft yang digunakan untuk menyimpan dan mengelola data.",
+      python: "Python adalah bahasa pemrograman tingkat tinggi yang populer untuk data science, machine learning, web development, dan otomatisasi.",
+      html: "HTML (HyperText Markup Language) adalah bahasa standar untuk membuat struktur halaman web.",
+      css: "CSS (Cascading Style Sheets) digunakan untuk mendesain dan mengatur tampilan halaman web.",
+      javascript: "JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif.",
+      kotlin: "Kotlin adalah bahasa modern yang dikembangkan oleh JetBrains dan merupakan bahasa resmi untuk pengembangan Android.",
+      java: "Java adalah bahasa pemrograman populer yang digunakan di banyak platform mulai dari aplikasi Android hingga sistem enterprise."
+    };
+
+    function showDetail(key) {
+      const box = document.getElementById('descriptionBox');
+      box.innerHTML = `<strong>${key.toUpperCase()}</strong><br><p>${descriptions[key]}</p>`;
+      box.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

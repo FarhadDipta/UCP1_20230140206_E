@@ -1,0 +1,55 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Halaman Utama</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('img/background2.png') no-repeat left top fixed;
+      background-size: contain;
+      background-color: #878988;
+      text-align: center;
+      padding: 50px;
+      position: relative;
+    }
+    .nav-buttons button {
+      margin: 20px;
+      padding: 15px 30px;
+      font-size: 16px;
+      background-color: #c00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .popup {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: yellow;
+      padding: 10px;
+      border: 2px solid black;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selamat Datang di Teknologi Informasi UMY Learning</h1>
+  <p>Meningkatkan kemampuan membangun program Anda bersama kami!</p>
+
+  <div class="nav-buttons">
+    <button onclick="location.href='features.html'">Feature</button>
+    <button onclick="location.href='about.html'">About</button>
+    <button onclick="location.href='contact.html'">Contact</button>
+  </div>
+
+  <div class="popup" id="promoPopup">
+    🎉 Promo Diskon 50% untuk pendaftaran bulan ini! 🎉
+    <button onclick="document.getElementById('promoPopup').style.display='none'">Tutup</button>
+  </div>
+
+  </script>
+</body>
+</html>

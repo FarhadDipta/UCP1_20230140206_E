@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Kontak</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      background: url('img/background2.png') no-repeat left top fixed;
+      background-size: contain;
+      background-color: #878988;
+      text-align: center;
+    }
+    #chatBox {
+      width: 300px;
+      margin: 0 auto;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    #chatBox input, #userMessage {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    #chatMessages {
+      display: none;
+      text-align: left;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #c00;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Hubungi Kami</h2>
+  <div id="chatBox">
+    <div id="formSection">
+      <input type="text" placeholder="Nama" id="chatName">
+      <input type="email" placeholder="Email" id="chatEmail">
+      <input type="text" placeholder="No Handphone" id="chatPhone">
+      <input type="text" placeholder="Minat" id="chatInterest">
+      <button onclick="startChat()">Mulai Chat</button>
+    </div>
+    <div id="chatMessages">
+      <p><strong>Admin:</strong> Selamat datang! Ada yang bisa kami bantu?</p>
+      <input type="text" id="userMessage" placeholder="Tulis pesan Anda di sini...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <br>
+  <button onclick="location.href='index.html'">Kembali ke Beranda</button>
+
+  <script>
+    function startChat() {
+      const name = document.getElementById('chatName').value;
+      const email = document.getElementById('chatEmail').value;
+      const phone = document.getElementById('chatPhone').value;
+      const interest = document.getElementById('chatInterest').value;
+
+      if (name && email && phone && interest) {
+        document.getElementById('formSection').style.display = 'none';
+        document.getElementById('chatMessages').style.display = 'block';
+      } else {
+        alert('Mohon lengkapi semua data.');
+      }
+    }
+
+    function sendMessage() {
+      const message = document.getElementById('userMessage').value;
+      if (message.trim() !== '') {
+        alert('Pesan Anda terkirim');
+        document.getElementById('userMessage').value = '';
+      } else {
+        alert('Mohon tulis pesan terlebih dahulu.');
+      }
+    }
+  </script>
+</body>
+</html>
